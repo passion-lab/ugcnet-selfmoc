@@ -1,0 +1,155 @@
+/* Basic reset and responsive styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+[id*="btn"] {
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    /* Added */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big-header {
+    font-size: 2rem;
+    color: #00509e;
+    font-weight: 100;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    color: #555;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#exam-selectors {
+    margin: 50px 0;
+}
+
+#test-select {
+    padding: 8px;
+    /* font-size: 1rem; */
+}
+
+#start-exam-btn {
+    background: #00a86b;
+}
+
+#start-exam-btn:hover {
+    background: #008f5a;
+}
+
+.hidden, 
+.hidden#exam-section, 
+.hidden.popup {
+    display: none;
+}
+
+/* Exam section */
+
+#exam-section {
+    /* display: flex;  --> injected by js */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.exam-iframe {
+    width: 100%;
+    height: 60vh;
+    margin-top: 20px;
+}
+
+.timer-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.timer-text {
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: #555;
+}
+
+#countdown-timer {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+#end-exam-btn {
+    background: #d9534f;
+    display: flex;
+    align-items: center;
+}
+
+#end-exam-btn:hover {
+    background: #c9302c;
+}
+
+/* Popup confirmation */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup > p {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#confirm-end-btn {
+    background: #d9302c;
+}
+
+#confirm-end-btn:hover {
+    background: #c9302c;
+}
+
+#cancel-end-btn {
+    background: #555;
+}
+
+#cancel-end-btn:hover {
+    background: #444;
+}

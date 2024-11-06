@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC-NET Self-MOC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header id="header">
+            <h1 class="big-header">UGC-NET <b>Self-MOC</b></h1>
+            <h3 class="subtitle">Test: <span id="test-number"></span></h3>
+            <div id="exam-selectors">
+                <select id="test-select" title="Select a test to start">
+                    <!-- Options populated by JavaScript -->
+                </select>
+                <button id="start-exam-btn">START EXAM</button>
+            </div>
+        </header>
+
+        <!-- Exam section hidden initially -->
+        <div id="exam-section" class="hidden">
+            <iframe id="exam-iframe" class="exam-iframe" src="" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            <div class="timer-container">
+                <div class="timer-text"><div id="countdown-timer">000:00</div>Time Remaining</div>
+                <button id="end-exam-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>End Exam</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Confirmation Popup -->
+    <div id="popup" class="popup hidden">
+        <p>Are you sure you want to end the exam?</p>
+        <div>
+            <button id="confirm-end-btn">Yes</button>
+            <button id="cancel-end-btn">NO</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
