@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     const tests = {
-        1: "https://docs.google.com/forms/d/e/1FAIpQLSf1pTestLink1/viewform",
-        2: "https://docs.google.com/forms/d/e/1FAIpQLSde8EZ2kjakhzUGSzRAWZMEzRSpBnG4fxoxeA3GODAXN-olFQ/viewform?embedded=true",
+        1: [180, "https://docs.google.com/forms/d/e/1FAIpQLSf1pTestLink1/viewform"],
+        2: [120, "https://docs.google.com/forms/d/e/1FAIpQLSde8EZ2kjakhzUGSzRAWZMEzRSpBnG4fxoxeA3GODAXN-olFQ/viewform?embedded=true"],
         // Add more test links as needed
-        "Random": "https://docs.google.com/forms/d/e/1FAIpQLSf1pRandomLink/viewform"
+        "Random": [180, "https://docs.google.com/forms/d/e/1FAIpQLSf1pRandomLink/viewform"]
     };
 
     // Initialize test number
@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function startExam() {
         examSection.classList.remove("hidden");
         examSelectors.classList.add("hidden");
-        iframe.src = tests[currentTest];
-        startTimer(180); // 180 minutes countdown
+        iframe.src = tests[currentTest][1];
+        startTimer(tests[currentTest][0]); // 180 minutes countdown
     }
 
     // Timer
