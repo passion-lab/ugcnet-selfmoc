@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const tests = {
         1: [180, "https://docs.google.com/forms/d/e/1FAIpQLSf1pTestLink1/viewform"],
-        2: [120, "https://docs.google.com/forms/d/e/1FAIpQLSde8EZ2kjakhzUGSzRAWZMEzRSpBnG4fxoxeA3GODAXN-olFQ/viewform?embedded=true"],
+        2: [180, "https://docs.google.com/forms/d/e/1FAIpQLSde8EZ2kjakhzUGSzRAWZMEzRSpBnG4fxoxeA3GODAXN-olFQ/viewform?embedded=true"],
         // Add more test links as needed
         "Random": [180, "https://docs.google.com/forms/d/e/1FAIpQLSf1pRandomLink/viewform"]
     };
